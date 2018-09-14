@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.12)
+cmake_minimum_required(VERSION 3.11)
 project(BSTradeC)
 
 set(CMAKE_PREFIX_PATH "/Users/bsdo/Qt/5.11.1/clang_64")

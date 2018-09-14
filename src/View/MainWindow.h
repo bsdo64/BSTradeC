@@ -17,15 +17,13 @@ class MainWindow : public QMainWindow
 
 public:
     explicit MainWindow(QWidget *parent = nullptr);
-    ~MainWindow();
-
-    void startAutoConnections();
+    ~MainWindow() override;
 
 private:
     Ui::MainWindow *ui;
 
 protected slots:
-    void mySlot();
+    void onSetMessage(bool triggered);
 };
 
 

@@ -18,14 +18,20 @@ message(${Qt5Widgets_VERSION})
 set(BSTrade_SRCS
         main.cpp
 
-        View/icons.qrc
+        BSTrade.cpp
+        BSTrade.h
 
-        View/mainwindow.cpp
-        View/mainwindow.h
+        View/ExchangeSelector.cpp
+        View/ExchangeSelector.h
+        View/MainWindow.cpp
         )
 #set  (BSTrade_Headers )
 set  (BSTrade_Forms
-        View/mainwindow.ui)
+        View/MainWindow.ui
+        View/ExchangeSelector.ui
+        )
 
-add_executable(BSTradeC ${BSTrade_SRCS} ${BSTrade_Forms})
+qt5_wrap_ui(QT_UI_SRCS ${BSTrade_Forms})
+
+add_executable(BSTradeC ${BSTrade_SRCS} ${QT_UI_SRCS})
 target_link_libraries(BSTradeC Qt5::Core Qt5::Widgets Qt5::Network )

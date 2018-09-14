@@ -1,14 +1,14 @@
 #include <QApplication>
 #include <QMainWindow>
+#include <iostream>
 
-#include "View/mainwindow.h"
+#include "View/MainWindow.h"
+#include "BSTrade.h"
 
 int main(int argc, char *argv[])
 {
-    QApplication app(argc, argv);
+    BSTrade app(argc, argv);
+    app.start();
 
-    MainWindow w;
-    w.show();
-
-    return QApplication::exec();
+    return 0;
 }
