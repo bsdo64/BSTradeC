@@ -3,12 +3,14 @@
 #include <iostream>
 
 #include "View/MainWindow.h"
-#include "BSTrade.h"
 
 int main(int argc, char *argv[])
 {
-    BSTrade app(argc, argv);
-    app.start();
+    QApplication app(argc, argv);
+    MainWindow win;
+    win.show();
+
+    app.exec();
 
     return 0;
 }

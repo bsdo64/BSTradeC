@@ -24,6 +24,8 @@ private:
 
 protected slots:
     void onSetMessage(bool triggered);
+
+    void wheelEvent(QWheelEvent *event) override;
 };
 
 

@@ -3,6 +3,8 @@
 //
 
 #include <iostream>
+#include <QWheelEvent>
+#include <QDebug>
 #include "MainWindow.h"
 #include "ui_MainWindow.h"
 
@@ -16,6 +18,11 @@ MainWindow::MainWindow(QWidget *parent) :
 
 MainWindow::~MainWindow() {
     delete ui;
+}
+
+void MainWindow::wheelEvent(QWheelEvent *event) {
+    QWidget::wheelEvent(event);
+    qDebug() << event->pos().x() << ", " << event->pos().y();
 }
 
 void MainWindow::onSetMessage(bool triggered) {

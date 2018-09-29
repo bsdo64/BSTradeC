@@ -5,7 +5,9 @@
 #ifndef BSTRADEC_EXCHANGESELECTOR_H
 #define BSTRADEC_EXCHANGESELECTOR_H
 
+#include <QDebug>
 #include <QDialog>
+#include <QListWidgetItem>
 
 namespace Ui {
     class ExchangeSelector;
@@ -19,11 +21,16 @@ public:
     explicit ExchangeSelector(QWidget *parent = nullptr);
     ~ExchangeSelector() override;
 
+protected:
+    void wheelEvent(QWheelEvent *event) override;
+
 private:
     Ui::ExchangeSelector *ui;
+    QListWidgetItem *s_item;
 
 protected slots:
-    void onSetMessage(bool triggered);
+    void openMain();
+    void itemSelected(QListWidgetItem *item);
 };
 
 
