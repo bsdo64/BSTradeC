@@ -18,15 +18,15 @@ message(${Qt5Widgets_VERSION})
 set(BSTrade_SRCS
         main.cpp
 
-        View/ExchangeSelector.cpp
-        View/ExchangeSelector.h
-        View/MainWindow.cpp
+        App/ExchangeSelector.cpp
+        App/ExchangeSelector.h
+        App/MainWindow.cpp
 
         )
 #set  (BSTrade_Headers )
 set  (BSTrade_Forms
-        View/MainWindow.ui
-        View/ExchangeSelector.ui
+        App/MainWindow.ui
+        App/ExchangeSelector.ui
         )
 
 qt5_wrap_ui(QT_UI_SRCS ${BSTrade_Forms})

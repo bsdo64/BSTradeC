@@ -2,7 +2,7 @@
 #include <QMainWindow>
 #include <iostream>
 
-#include "View/MainWindow.h"
+#include "App/MainWindow.h"
 
 int main(int argc, char *argv[])
 {
@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
     MainWindow win;
     win.show();
 
-    app.exec();
+    QApplication::exec();
 
     return 0;
 }

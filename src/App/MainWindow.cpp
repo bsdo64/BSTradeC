@@ -2,7 +2,6 @@
 // Created by bscom on 2018. 9. 10..
 //
 
-#include <iostream>
 #include <QWheelEvent>
 #include <QDebug>
 #include "MainWindow.h"
@@ -23,6 +22,7 @@ MainWindow::~MainWindow() {
 void MainWindow::wheelEvent(QWheelEvent *event) {
     QWidget::wheelEvent(event);
     qDebug() << event->pos().x() << ", " << event->pos().y();
+    onSetMessage(false);
 }
 
 void MainWindow::onSetMessage(bool triggered) {
